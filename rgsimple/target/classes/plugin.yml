@@ -1,0 +1,36 @@
+name: srgmarket
+version: 1.0
+main: srgmarket.srgmarket
+api-version: 1.20
+depend: [WorldGuard, Vault]
+
+
+
+
+
+commands:
+
+  vender:
+    description: Vende una región.
+    usage: /vender <nombre> <precio>
+    permission: srgmarket.sell
+  comprar:
+    description: Compra una región.
+    usage: /comprar <nombre>
+    permission: srgmarket.buy
+
+permissions:
+  srgmarket.buy:
+    description: Permite a los jugadores comprar regiones.
+    default: true
+  srgmarket.sell:
+    description: Permite a los jugadores vender regiones.
+    default: true
+  srgmarket.admin:
+    description: Permite a los administradores gestionar el mercado.
+    default: op
+  market.create:
+    description: Permite crear carteles de mercado.
+    default: true
+  enabled: true
+  provider: PermissionsEx

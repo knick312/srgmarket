@@ -1,0 +1,47 @@
+
+handlers:
+  permissions-system: "PermissionsEx"  # ⬅ Activa PEX
+
+# Mensajes que se mostrarán al jugador
+messages:
+  no_permission: "&c¡No tienes permiso para hacer eso!"
+  region_not_found: "&cLa región &e{region}&c no existe en WorldGuard."
+  region_no_owner: "&cLa región &e{region}&c no tiene propietario."
+  price_mismatch: "&cEl precio del cartel no coincide con el precio mínimo."
+  invalid_price: "&cEl precio en el cartel no es válido."
+  sold_region: "&aHas vendido la región &e{region} &apor &a${price}."
+  rented_region: "&aHas alquilado la región &e{region} &apor &a${price} por {duration}!"
+  bought_region: "&a{player} ha comprado la región &e{region} &apor &a${price}!"
+  insufficient_funds: "&cNo tienes suficiente dinero para comprar o alquilar esta región."
+  sign_created: "&aCartel creado para la región &e{region} &apor &a${price}&a."
+  dimensions: "&7Dimensiones del terreno: &e{width} x {length}"
+
+# Configuración del cartel
+sign:
+  header: "[Market]"         # Texto para identificar el cartel de venta o renta (primera línea)
+  for_sale: "[ForSale]"      # Texto que aparecerá cuando la región esté en venta
+  for_rent: "[Rent]"         # Texto que aparecerá cuando la región esté en alquiler
+owner_display: "prop: {player}"
+
+# Configuración de la renta
+rental:
+  allow_rental: true          # Permitir el alquiler de regiones
+  rental_duration: 30         # Duración en días del alquiler (para propósitos de ejemplo, se puede ajustar)
+  rental_minimum_price: 50   # Precio mínimo permitido para alquilar una región
+
+# Opciones generales del plugin
+general:
+  default_price: 500          # Precio por defecto si no se especifica en el cartel
+  allow_resale: true          # Permitir que los jugadores revendan regiones
+  min_price: 100              # Precio mínimo permitido para la venta
+show_region_size: true      # Muestra el tamaño de la región en el cartel
+allow_admin_override: true  # Permite que los administradores puedan vender cualquier región
+region:
+  addmember-on-rent: true
+  addowner-on-buy: true
+
+# Configuración para la creación de carteles
+sign_creation:
+  enable_creation: true     # Habilitar la creación de carteles
+  sell_sign: true           # Permitir la creación de carteles de venta
+  rent_sign: true           # Permitir la creación de carteles de alquiler
